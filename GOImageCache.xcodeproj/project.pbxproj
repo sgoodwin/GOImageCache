@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B7E8C9E14AD820D00587C62 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7E8C9D14AD820D00587C62 /* Cocoa.framework */; };
+		9B7E8CA814AD820D00587C62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E8CA614AD820D00587C62 /* InfoPlist.strings */; };
+		9B7E8CAA14AD820D00587C62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E8CA914AD820D00587C62 /* main.m */; };
+		9B7E8CAE14AD820D00587C62 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E8CAC14AD820D00587C62 /* Credits.rtf */; };
+		9B7E8CB114AD820D00587C62 /* GOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E8CB014AD820D00587C62 /* GOAppDelegate.m */; };
+		9B7E8CB414AD820D00587C62 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E8CB214AD820D00587C62 /* MainMenu.xib */; };
+		9B7E8CBC14AD820D00587C62 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7E8CBB14AD820D00587C62 /* SenTestingKit.framework */; };
+		9B7E8CBD14AD820D00587C62 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B7E8C9D14AD820D00587C62 /* Cocoa.framework */; };
+		9B7E8CC514AD820D00587C62 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E8CC314AD820D00587C62 /* InfoPlist.strings */; };
+		9B7E8CC814AD820E00587C62 /* GOImageCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E8CC714AD820E00587C62 /* GOImageCacheTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B7E8CBE14AD820D00587C62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B7E8C9014AD820D00587C62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B7E8C9814AD820D00587C62;
+			remoteInfo = GOImageCache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9B7E8C9914AD820D00587C62 /* GOImageCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOImageCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B7E8C9D14AD820D00587C62 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9B7E8CA014AD820D00587C62 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9B7E8CA114AD820D00587C62 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9B7E8CA214AD820D00587C62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9B7E8CA514AD820D00587C62 /* GOImageCache-Info.plist */ = {isa = PBXFileReference; path = "GOImageCache-Info.plist"; sourceTree = "<group>"; };
+		9B7E8CA714AD820D00587C62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9B7E8CA914AD820D00587C62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9B7E8CAB14AD820D00587C62 /* GOImageCache-Prefix.pch */ = {isa = PBXFileReference; path = "GOImageCache-Prefix.pch"; sourceTree = "<group>"; };
+		9B7E8CAD14AD820D00587C62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		9B7E8CAF14AD820D00587C62 /* GOAppDelegate.h */ = {isa = PBXFileReference; path = GOAppDelegate.h; sourceTree = "<group>"; };
+		9B7E8CB014AD820D00587C62 /* GOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOAppDelegate.m; sourceTree = "<group>"; };
+		9B7E8CB314AD820D00587C62 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9B7E8CBA14AD820D00587C62 /* GOImageCacheTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOImageCacheTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B7E8CBB14AD820D00587C62 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9B7E8CC214AD820D00587C62 /* GOImageCacheTests-Info.plist */ = {isa = PBXFileReference; path = "GOImageCacheTests-Info.plist"; sourceTree = "<group>"; };
+		9B7E8CC414AD820D00587C62 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9B7E8CC614AD820D00587C62 /* GOImageCacheTests.h */ = {isa = PBXFileReference; path = GOImageCacheTests.h; sourceTree = "<group>"; };
+		9B7E8CC714AD820E00587C62 /* GOImageCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOImageCacheTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B7E8C9614AD820D00587C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B7E8C9E14AD820D00587C62 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B7E8CB614AD820D00587C62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B7E8CBC14AD820D00587C62 /* SenTestingKit.framework in Frameworks */,
+				9B7E8CBD14AD820D00587C62 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B7E8C8E14AD820D00587C62 = {
+			isa = PBXGroup;
+			children = (
+				9B7E8CA314AD820D00587C62 /* GOImageCache */,
+				9B7E8CC014AD820D00587C62 /* GOImageCacheTests */,
+				9B7E8C9C14AD820D00587C62 /* Frameworks */,
+				9B7E8C9A14AD820D00587C62 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B7E8C9A14AD820D00587C62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E8C9914AD820D00587C62 /* GOImageCache.app */,
+				9B7E8CBA14AD820D00587C62 /* GOImageCacheTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B7E8C9C14AD820D00587C62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E8C9D14AD820D00587C62 /* Cocoa.framework */,
+				9B7E8CBB14AD820D00587C62 /* SenTestingKit.framework */,
+				9B7E8C9F14AD820D00587C62 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B7E8C9F14AD820D00587C62 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E8CA014AD820D00587C62 /* AppKit.framework */,
+				9B7E8CA114AD820D00587C62 /* CoreData.framework */,
+				9B7E8CA214AD820D00587C62 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9B7E8CA314AD820D00587C62 /* GOImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E8CAF14AD820D00587C62 /* GOAppDelegate.h */,
+				9B7E8CB014AD820D00587C62 /* GOAppDelegate.m */,
+				9B7E8CB214AD820D00587C62 /* MainMenu.xib */,
+				9B7E8CA414AD820D00587C62 /* Supporting Files */,
+			);
+			path = GOImageCache;
+			sourceTree = "<group>";
+		};
+		9B7E8CA414AD820D00587C62 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E8CA514AD820D00587C62 /* GOImageCache-Info.plist */,
+				9B7E8CA614AD820D00587C62 /* InfoPlist.strings */,
+				9B7E8CA914AD820D00587C62 /* main.m */,
+				9B7E8CAB14AD820D00587C62 /* GOImageCache-Prefix.pch */,
+				9B7E8CAC14AD820D00587C62 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B7E8CC014AD820D00587C62 /* GOImageCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E8CC614AD820D00587C62 /* GOImageCacheTests.h */,
+				9B7E8CC714AD820E00587C62 /* GOImageCacheTests.m */,
+				9B7E8CC114AD820D00587C62 /* Supporting Files */,
+			);
+			path = GOImageCacheTests;
+			sourceTree = "<group>";
+		};
+		9B7E8CC114AD820D00587C62 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B7E8CC214AD820D00587C62 /* GOImageCacheTests-Info.plist */,
+				9B7E8CC314AD820D00587C62 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B7E8C9814AD820D00587C62 /* GOImageCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B7E8CCB14AD820E00587C62 /* Build configuration list for PBXNativeTarget "GOImageCache" */;
+			buildPhases = (
+				9B7E8C9514AD820D00587C62 /* Sources */,
+				9B7E8C9614AD820D00587C62 /* Frameworks */,
+				9B7E8C9714AD820D00587C62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GOImageCache;
+			productName = GOImageCache;
+			productReference = 9B7E8C9914AD820D00587C62 /* GOImageCache.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9B7E8CB914AD820D00587C62 /* GOImageCacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B7E8CCE14AD820E00587C62 /* Build configuration list for PBXNativeTarget "GOImageCacheTests" */;
+			buildPhases = (
+				9B7E8CB514AD820D00587C62 /* Sources */,
+				9B7E8CB614AD820D00587C62 /* Frameworks */,
+				9B7E8CB714AD820D00587C62 /* Resources */,
+				9B7E8CB814AD820D00587C62 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B7E8CBF14AD820D00587C62 /* PBXTargetDependency */,
+			);
+			name = GOImageCacheTests;
+			productName = GOImageCacheTests;
+			productReference = 9B7E8CBA14AD820D00587C62 /* GOImageCacheTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B7E8C9014AD820D00587C62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "SNAP Interactive";
+			};
+			buildConfigurationList = 9B7E8C9314AD820D00587C62 /* Build configuration list for PBXProject "GOImageCache" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9B7E8C8E14AD820D00587C62;
+			productRefGroup = 9B7E8C9A14AD820D00587C62 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B7E8C9814AD820D00587C62 /* GOImageCache */,
+				9B7E8CB914AD820D00587C62 /* GOImageCacheTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B7E8C9714AD820D00587C62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B7E8CA814AD820D00587C62 /* InfoPlist.strings in Resources */,
+				9B7E8CAE14AD820D00587C62 /* Credits.rtf in Resources */,
+				9B7E8CB414AD820D00587C62 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B7E8CB714AD820D00587C62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B7E8CC514AD820D00587C62 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B7E8CB814AD820D00587C62 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B7E8C9514AD820D00587C62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B7E8CAA14AD820D00587C62 /* main.m in Sources */,
+				9B7E8CB114AD820D00587C62 /* GOAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B7E8CB514AD820D00587C62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B7E8CC814AD820E00587C62 /* GOImageCacheTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B7E8CBF14AD820D00587C62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B7E8C9814AD820D00587C62 /* GOImageCache */;
+			targetProxy = 9B7E8CBE14AD820D00587C62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9B7E8CA614AD820D00587C62 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B7E8CA714AD820D00587C62 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9B7E8CAC14AD820D00587C62 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B7E8CAD14AD820D00587C62 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		9B7E8CB214AD820D00587C62 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B7E8CB314AD820D00587C62 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		9B7E8CC314AD820D00587C62 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B7E8CC414AD820D00587C62 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B7E8CC914AD820E00587C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9B7E8CCA14AD820E00587C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9B7E8CCC14AD820E00587C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GOImageCache/GOImageCache-Prefix.pch";
+				INFOPLIST_FILE = "GOImageCache/GOImageCache-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9B7E8CCD14AD820E00587C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GOImageCache/GOImageCache-Prefix.pch";
+				INFOPLIST_FILE = "GOImageCache/GOImageCache-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9B7E8CCF14AD820E00587C62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GOImageCache.app/Contents/MacOS/GOImageCache";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GOImageCache/GOImageCache-Prefix.pch";
+				INFOPLIST_FILE = "GOImageCacheTests/GOImageCacheTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9B7E8CD014AD820E00587C62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GOImageCache.app/Contents/MacOS/GOImageCache";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GOImageCache/GOImageCache-Prefix.pch";
+				INFOPLIST_FILE = "GOImageCacheTests/GOImageCacheTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B7E8C9314AD820D00587C62 /* Build configuration list for PBXProject "GOImageCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B7E8CC914AD820E00587C62 /* Debug */,
+				9B7E8CCA14AD820E00587C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B7E8CCB14AD820E00587C62 /* Build configuration list for PBXNativeTarget "GOImageCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B7E8CCC14AD820E00587C62 /* Debug */,
+				9B7E8CCD14AD820E00587C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B7E8CCE14AD820E00587C62 /* Build configuration list for PBXNativeTarget "GOImageCacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B7E8CCF14AD820E00587C62 /* Debug */,
+				9B7E8CD014AD820E00587C62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B7E8C9014AD820D00587C62 /* Project object */;
+}
