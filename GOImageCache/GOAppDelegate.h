@@ -8,8 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface GOAppDelegate : NSObject <NSApplicationDelegate>
+@interface GOAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
-@property (assign) IBOutlet NSWindow *window;
-
+@property (strong) NSOperationQueue *queue;
+@property (strong) NSMutableArray *URLStrings;
+@property (unsafe_unretained) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSTableView *tableView;
+@property (unsafe_unretained) IBOutlet NSTableCellView *dummyCell;
 @end

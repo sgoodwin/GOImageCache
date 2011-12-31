@@ -7,7 +7,55 @@
 //
 
 #import "GOImageCache.h"
+#import "GOHTTPOperation.h"
+
+NSString *const kImageQueueName = @"com.goodwinlabs.imageQueue";
+NSString *const kImageCacheName = @"com.goodwinlabs.imageCache";
+const NSInteger kImageQueueConcurrencyCount = 3;
 
 @implementation GOImageCache
+@synthesize imageQueue = _imageQueue;
+@synthesize imageCache = _imageCache;
+
+static GOImageCache *sharedImageCache = nil;
++ (id)sharedImageCache{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedImageCache = [[self alloc] init];
+        
+        NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+        [queue setMaxConcurrentOperationCount:kImageQueueConcurrencyCount];
+        [queue setName:kImageQueueName];
+        sharedImageCache.imageQueue = queue;
+        
+        NSCache *cache = [[NSCache alloc] init];
+        [cache setName:kImageCacheName];
+        sharedImageCache.imageCache = cache;
+    });
+    return sharedImageCache;
+}
+
+- (void)getImageWithURL:(NSURL*)url andCompletion:(GOImageBlock)imageBlock{
+    NSImage *image = [[self imageCache] objectForKey:url];
+    if(image){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            imageBlock(image);
+        });
+        return;
+    }
+    
+    GOHTTPOperation *operation = [GOHTTPOperation operationWithURL:url method:GOHTTPMethodGET];
+    [operation addCompletion:^(NSData *data){
+        NSImage *newImage = [[NSImage alloc] initWithData:data];
+        if(!newImage){
+            NSLog(@"Response when we wanted an image: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        }
+        [[self imageCache] setObject:newImage forKey:url];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            imageBlock(image);
+        });
+    }];
+    [[self imageQueue] addOperation:operation];
+}
 
 @end
