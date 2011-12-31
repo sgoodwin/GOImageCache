@@ -1,0 +1,7 @@
+IndividualDeveloperConfig.plist
+.DS_Store
+Interested.xcodeproj/project.xcworkspace/xcuserdata/eiskandar.xcuserdatad/UserInterfaceState.xcuserstate
+build/
+include/FBConnect/build/
+include/FBConnect/facebook-ios-sdk.xcodeproj/xcuserdata/
+*xcuserdata*
