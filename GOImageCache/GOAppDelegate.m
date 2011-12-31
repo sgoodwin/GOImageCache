@@ -10,6 +10,8 @@
 #import "GOImageCache.h"
 #import "GOHTTPOperation.h"
 
+NSString *const kColumnIdentifier = @"images";
+
 @interface GOAppDelegate()
 - (void)getImageURLSFromIDs:(NSArray *)ids;
 @end
@@ -19,12 +21,13 @@
 @synthesize queue = _queue;
 @synthesize URLStrings = _URLStrings;
 @synthesize window = _window;
+@synthesize flickerHider = _flickerHider;
 @synthesize tableView = _tableView;
 @synthesize dummyCell = _dummyCell;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+{    
     self.URLStrings = [NSMutableArray array];
     NSURL *url = [NSURL URLWithString:@"https://api.instagram.com/v1/media/popular?client_id=bd080f67fef14278a481dac6257cb58f"];
     GOHTTPOperation *operation = [GOHTTPOperation operationWithURL:url method:GOHTTPMethodGET];
@@ -46,6 +49,7 @@
 }
 
 - (void)getImageURLSFromIDs:(NSArray *)ids{
+    NSInteger numberOfImagesToRequest = [ids count];
     [ids enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSString *urlString = [NSString stringWithFormat:@"https://api.instagram.com/v1/media/%@?client_id=bd080f67fef14278a481dac6257cb58f", obj];
         NSURL *url = [NSURL URLWithString:urlString];
@@ -53,15 +57,19 @@
         [operation addCompletion:^(NSData *data){
             NSError *error = nil;
             NSDictionary *response = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+
+            [self willChangeValueForKey:@"URLStrings"];
             [self.URLStrings addObject:[[[[response objectForKey:@"data"] objectForKey:@"images"] objectForKey:@"standard_resolution"] objectForKey:@"url"]];
-            [self.tableView reloadData];
+            [self didChangeValueForKey:@"URLStrings"];
+            
+            NSUInteger loadedImageNumber = [self.URLStrings count];
+            NSLog(@"Loaded image %lu/%ld", loadedImageNumber, numberOfImagesToRequest);
+            if(loadedImageNumber == (NSUInteger)numberOfImagesToRequest){
+                [self.flickerHider removeFromSuperview];
+            }
         }];
         [[NSOperationQueue mainQueue] addOperation:operation];
     }];
-}
-
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView{
-    return [self.URLStrings count];
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row{

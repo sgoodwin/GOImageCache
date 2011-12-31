@@ -13,6 +13,7 @@
 @property (strong) NSOperationQueue *queue;
 @property (strong) NSMutableArray *URLStrings;
 @property (unsafe_unretained) IBOutlet NSWindow *window;
+@property (unsafe_unretained) IBOutlet NSView *flickerHider;
 @property (weak) IBOutlet NSTableView *tableView;
 @property (unsafe_unretained) IBOutlet NSTableCellView *dummyCell;
 @end

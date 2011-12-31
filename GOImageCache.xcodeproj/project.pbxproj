@@ -21,6 +21,8 @@
 		9B7E8CDA14AD82E500587C62 /* GOHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E8CD914AD82E500587C62 /* GOHTTPOperation.m */; };
 		9B7E8CDC14AD92FB00587C62 /* GODummyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E8CDB14AD92FB00587C62 /* GODummyView.xib */; };
 		9B7E8CDE14AD950800587C62 /* booze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B7E8CDD14AD950800587C62 /* booze.jpg */; };
+		9B8E2BF514AFA45F000956C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B8E2BF414AFA45F000956C0 /* QuartzCore.framework */; };
+		9B8E2BF914AFA4FE000956C0 /* GOBlackOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E2BF814AFA4FE000956C0 /* GOBlackOutView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		9B7E8CD914AD82E500587C62 /* GOHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOHTTPOperation.m; sourceTree = "<group>"; };
 		9B7E8CDB14AD92FB00587C62 /* GODummyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GODummyView.xib; sourceTree = "<group>"; };
 		9B7E8CDD14AD950800587C62 /* booze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = booze.jpg; sourceTree = "<group>"; };
+		9B8E2BF414AFA45F000956C0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9B8E2BF714AFA4FE000956C0 /* GOBlackOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOBlackOutView.h; sourceTree = "<group>"; };
+		9B8E2BF814AFA4FE000956C0 /* GOBlackOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOBlackOutView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8E2BF514AFA45F000956C0 /* QuartzCore.framework in Frameworks */,
 				9B7E8C9E14AD820D00587C62 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +110,7 @@
 		9B7E8C9C14AD820D00587C62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B8E2BF414AFA45F000956C0 /* QuartzCore.framework */,
 				9B7E8C9D14AD820D00587C62 /* Cocoa.framework */,
 				9B7E8CBB14AD820D00587C62 /* SenTestingKit.framework */,
 				9B7E8C9F14AD820D00587C62 /* Other Frameworks */,
@@ -134,6 +141,8 @@
 				9B7E8CD814AD82E500587C62 /* GOHTTPOperation.h */,
 				9B7E8CD914AD82E500587C62 /* GOHTTPOperation.m */,
 				9B7E8CDB14AD92FB00587C62 /* GODummyView.xib */,
+				9B8E2BF714AFA4FE000956C0 /* GOBlackOutView.h */,
+				9B8E2BF814AFA4FE000956C0 /* GOBlackOutView.m */,
 			);
 			path = GOImageCache;
 			sourceTree = "<group>";
@@ -283,6 +292,7 @@
 				9B7E8CB114AD820D00587C62 /* GOAppDelegate.m in Sources */,
 				9B7E8CD314AD821D00587C62 /* GOImageCache.m in Sources */,
 				9B7E8CDA14AD82E500587C62 /* GOHTTPOperation.m in Sources */,
+				9B8E2BF914AFA4FE000956C0 /* GOBlackOutView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
