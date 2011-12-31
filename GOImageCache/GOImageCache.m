@@ -13,6 +13,10 @@ NSString *const kImageQueueName = @"com.goodwinlabs.imageQueue";
 NSString *const kImageCacheName = @"com.goodwinlabs.imageCache";
 const NSInteger kImageQueueConcurrencyCount = 3;
 
+@interface GOImageCache()
+- (GOHTTPOperation*)operationForURL:(NSURL*)url;
+@end
+
 @implementation GOImageCache
 @synthesize imageQueue = _imageQueue;
 @synthesize imageCache = _imageCache;
@@ -35,6 +39,17 @@ static GOImageCache *sharedImageCache = nil;
     return sharedImageCache;
 }
 
+- (GOHTTPOperation*)operationForURL:(NSURL*)url{
+    __block GOHTTPOperation *operation = nil;
+    [[[self imageQueue] operations] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop){
+        if([[[obj request] URL] isEqual:url]){
+            operation = obj;
+            *stop = YES;
+        }
+    }];
+    return operation;
+}
+
 - (void)getImageWithURL:(NSURL*)url andCompletion:(GOImageBlock)imageBlock{
     NSImage *image = [[self imageCache] objectForKey:url];
     if(image){
@@ -44,17 +59,25 @@ static GOImageCache *sharedImageCache = nil;
         return;
     }
     
-    GOHTTPOperation *operation = [GOHTTPOperation operationWithURL:url method:GOHTTPMethodGET];
-    [operation addCompletion:^(NSData *data){
+    GODataBlock dataBlock = ^(NSData *data){
         NSImage *newImage = [[NSImage alloc] initWithData:data];
         if(!newImage){
             NSLog(@"Response when we wanted an image: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         }
         [[self imageCache] setObject:newImage forKey:url];
         dispatch_async(dispatch_get_main_queue(), ^{
-            imageBlock(image);
+            imageBlock(newImage);
         });
-    }];
+    };
+    
+    GOHTTPOperation *operation = [self operationForURL:url];
+    if(operation){
+        [operation addCompletion:dataBlock];
+        return;
+    }
+    
+    operation = [GOHTTPOperation operationWithURL:url method:GOHTTPMethodGET];
+    [operation addCompletion:dataBlock];
     [[self imageQueue] addOperation:operation];
 }
 

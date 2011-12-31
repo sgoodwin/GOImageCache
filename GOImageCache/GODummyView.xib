@@ -67,13 +67,9 @@
 						<object class="NSImageCell" key="NSCell" id="210020330">
 							<int key="NSCellFlags">130560</int>
 							<int key="NSCellFlags2">33554432</int>
-							<object class="NSCustomResource" key="NSContents">
-								<string key="NSClassName">NSImage</string>
-								<string key="NSResourceName">NSActionTemplate</string>
-							</object>
 							<string key="NSCellIdentifier">_NS:75</string>
 							<int key="NSAlign">0</int>
-							<int key="NSScale">0</int>
+							<int key="NSScale">2</int>
 							<int key="NSStyle">0</int>
 							<bool key="NSAnimates">NO</bool>
 						</object>
@@ -274,14 +270,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>dummyCell</string>
-							<string>dummyCellNib</string>
 							<string>tableView</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSTableCellView</string>
-							<string>NSNib</string>
 							<string>NSTableView</string>
 							<string>NSWindow</string>
 						</object>
@@ -291,7 +285,6 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>dummyCell</string>
-							<string>dummyCellNib</string>
 							<string>tableView</string>
 							<string>window</string>
 						</object>
@@ -300,10 +293,6 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">dummyCell</string>
 								<string key="candidateClassName">NSTableCellView</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">dummyCellNib</string>
-								<string key="candidateClassName">NSNib</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">tableView</string>
@@ -330,9 +319,5 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">NSActionTemplate</string>
-			<string key="NS.object.0">{15, 15}</string>
-		</object>
 	</data>
 </archive>
